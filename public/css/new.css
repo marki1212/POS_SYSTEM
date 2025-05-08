@@ -1,0 +1,300 @@
+#sidebar-wrapper {
+    height: 100vh; /* Full height */
+    width: 190px; /* Adjust width as needed */
+    position: fixed;
+    background-color: #1f1e2e; /* Sidebar background color */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+#page-content-wrapper {
+    min-width: 100%;
+    margin-left: 150px;
+    background-color: #151521;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+#menu-toggle {
+    cursor: pointer;
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item.active {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: none;
+}
+
+body {
+    background-color: #151521;
+    overflow: hidden;
+}
+.dashboard {
+    width: 60%; /* Adjust width to take 60% of the container */
+    margin-right: 40%; /* Add margin to the right to take 40% of the container */
+    white-space: nowrap; /* Prevent line breaks inside the column */
+    padding: 10px; /* Add padding for better aesthetics */
+    overflow-x: auto; /* Enable horizontal overflow */
+    cursor: grab; /* Change cursor to indicate draggable area */
+    user-select: none; /* Prevent text selection while dragging */
+}
+
+.scrollable-content {
+    display: inline-block;
+    text-align: center;
+    background-color: #151521; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside each content block */
+    margin-right: 20px; /* Space between items */
+    width: 180px; /* Fixed width for each item */
+    height: 200px;
+    color: white;
+    cursor: pointer; /* Change cursor to pointer for clickable content */
+}
+
+.scrollable-content h5 {
+    padding: 20px;
+
+    font-size: 1.1em;
+}
+.scrollable-content img {
+    padding: 20px;
+}
+
+/* WebKit-based browsers */
+.dashboard::-webkit-scrollbar {
+    height: 8px; /* Set scrollbar height */
+}
+
+.dashboard::-webkit-scrollbar-thumb {
+    background-color: yellow; /* Set scrollbar thumb color */
+    border-radius: 10px; /* Round scrollbar edges */
+}
+
+.dashboard::-webkit-scrollbar-track {
+    background: transparent; /* Set scrollbar track color */
+}
+
+/* Firefox */
+.dashboard {
+    scrollbar-width: thin; /* Set scrollbar width */
+    scrollbar-color: yellow transparent; /* Set scrollbar thumb and track colors */
+}
+
+/* Order Form Styles */
+.order-form-container {
+    width: 30%;
+    position: fixed;
+    top: 0;
+    right: 100px;
+    height: calc(100vh - 20px); /* Full viewport height with margin */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    margin-top: 10px; /* Margin for spacing */
+    margin-bottom: 10px; /* Margin for spacing */
+}
+
+.order-form-card {
+    background-color: #1f1e2c;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 95vh; /* Make the card take the full height of the container */
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.order-form-card h2 {
+    margin-bottom: 20px;
+}
+
+.order-form-card .form-group {
+    margin-bottom: 15px;
+}
+
+.order-form-card label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.order-form-card input,
+.order-form-card select {
+    width: 100%;
+
+    border: 1px solid #ffffff4f;
+    border-radius: 4px;
+}
+
+.order-form-card .form-group.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-form-card .form-group.total input {
+    width: auto;
+    background-color: #1c1b2b;
+    color: white;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.order-form-card .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.order-form-card .btn:hover {
+    background-color: #0056b3;
+}
+.dish-card {
+    flex: 1;
+    margin: 10px;
+    background-color: #1f1e2c;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+}
+
+.dish-card img {
+    height: auto;
+    width: 200px;
+    padding: 2rem 1rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.dish-details {
+    padding: 10px;
+    color: #4f4f58;
+}
+
+.dish-name {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.dish-price {
+    font-size: 1.7rem;
+    color: #58a86a;
+    font-weight: bold;
+}
+.container-custom {
+    width: 60%;
+    margin-top: 3rem;
+    margin-right: 40%;
+    overflow: hidden;
+}
+
+.scrollable-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 600px; /* Set the height of the scrollable container */
+    width: 100%; /* Set the container to full width */
+}
+
+.dish-card {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Hide the browser's default scrollbar */
+.scrollable-container::-webkit-scrollbar,
+.order-form-card::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Custom scrollbar track */
+.scrollable-container::-webkit-scrollbar-track,
+.order-form-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Custom scrollbar thumb */
+.scrollable-container::-webkit-scrollbar-thumb,
+.order-form-card::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+.dish-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.dish-container img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control a {
+    background-color: #e1b924;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+.dish-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.active-order-type {
+    border-color: yellow !important;
+}
+
+.dish-card {
+    cursor: pointer;
+}
+
+.dish-card.selected {
+    border: 2px solid yellow;
+}
+
+.remove-dish-btn {
+    font-size: 15px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(190, 27, 27);
+    line-height: 20px;
+}
+.dish-card.checked {
+    border: 2px solid rgb(213, 248, 12);
+    /* Add a border when checked */
+}
